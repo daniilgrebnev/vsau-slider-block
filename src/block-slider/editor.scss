@@ -1,0 +1,15 @@
+.custom-slider {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.slide img {
+	width: 100%;
+	max-width: 500px;
+}
+
+.description {
+	font-size: 16px;
+	margin-top: 10px;
+}

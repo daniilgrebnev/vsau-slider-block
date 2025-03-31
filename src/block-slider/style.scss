@@ -1,0 +1,128 @@
+/* editor-style.css (или аналогичный файл стилей для редактора) */
+
+/* Общий контейнер для всех слайдов, чтобы они прокручивались по горизонтали */
+.editor-slider-container {
+	display: flex;
+	gap: 20px; /* Расстояние между слайдами */
+	overflow-x: auto; /* Горизонтальная прокрутка */
+	padding: 10px;
+	background: #f5f5f5; /* Цвет фона под всеми слайдами в редакторе */
+	border: 1px solid #ddd;
+}
+
+/* Отдельный слайд */
+.slide-editor {
+	flex: 0 0 auto; /* Не даём блоку сжиматься; позволяет прокручиваться по горизонтали */
+	display: flex;
+	align-items: stretch; /* Растягиваем элементы по высоте */
+	background: #ffffff;
+	border: 1px solid #ccc;
+	min-width: 90%;
+	height: 350px;
+}
+
+/* Левая часть для фото */
+.slide-editor .photo-block {
+	width: 30%; /* Пропорция для блока фото, меняйте на свой вкус */
+	background: #ccc; /* Заливка для наглядности, замените или уберите */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Средняя часть для описания */
+.slide-editor .description-block {
+	flex: 1; /* Занимает оставшееся пространство */
+	background: #e0e0e0; /* Заливка для наглядности */
+	padding: 10px;
+	display: flex;
+	align-items: start;
+	justify-content: start;
+	text-align: left;
+	max-height: 100%;
+	overflow-y: auto;
+}
+
+/* Правая часть для кнопки добавления нового слайда */
+.slide-editor .add-slide-block {
+	width: 100px;
+	background: #f2f2f2;
+	border-left: 2px dashed #999;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Пример для картинки в блоке фото */
+.slide-editor .photo-block img {
+	width: 100%;
+	height: auto;
+}
+
+/* Стили для кнопки в редакторе */
+.button.button-primary {
+	margin-top: 10px;
+}
+.components-button .button {
+	padding: 0 !important;
+}
+
+.custom-slider-block {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	flex-wrap: nowrap;
+	gap: 20px;
+	max-height: 350px;
+	max-width: 100%;
+	position: relative;
+	overflow-x: auto;
+	overflow-y: hidden;
+	margin: 20px 0;
+	.slide-block {
+		font-size: 14px;
+		flex: 0 0 auto;
+		background: #fff;
+		display: grid;
+		grid-template-columns: 20% 80%;
+		border-radius: 5px;
+		overflow: hidden;
+		max-height: 350px;
+		height: 350px;
+		height: 100%;
+		min-width: 80%;
+		align-items: start;
+		justify-content: start;
+		gap: 10px;
+
+		b {
+			font-weight: bold;
+		}
+		em {
+			font-size: 24px;
+		}
+		.img {
+			width: 100%;
+			height: 100%;
+			min-width: 100%;
+			min-height: 100%;
+			img {
+				width: auto;
+				height: 100%;
+			}
+		}
+		.slide-content {
+			padding: 40px;
+
+			max-height: 100%;
+			overflow-y: auto;
+		}
+	}
+}
+.components-button {
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+}
